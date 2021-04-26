@@ -1,0 +1,55 @@
+{
+  "version": "1.18.0", 
+  "menus": [
+    [
+      "AS_Scripts", 
+      "3D View Generic", 
+      "F1, NONE", 
+      [
+        [
+          "viewport_toggle", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/viewport_visibility_custom.py\")", 
+          0
+        ], 
+        [
+          "modifiers_toggle", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_visibility_custom.py\")", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
+      "PRESS", 
+      "", 
+      ""
+    ]
+  ]
+}
