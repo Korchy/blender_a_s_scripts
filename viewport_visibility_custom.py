@@ -16,6 +16,10 @@ if not hasattr(bpy.context.window_manager, 'a_s_scripts_viewport_visibility_cust
         default=False
     )
 
+current_mode = bpy.context.object.mode if bpy.context.object else 'OBJECT'
+if current_mode == 'EDIT':
+    bpy.ops.object.mode_set(mode='OBJECT')
+
 # change custom visibility
 if bpy.context.window_manager.a_s_scripts_viewport_visibility_custom_mode:
     # True
@@ -44,3 +48,5 @@ else:
     bpy.context.space_data.overlay.show_overlays = True
     # toggle mode
     bpy.context.window_manager.a_s_scripts_viewport_visibility_custom_mode = True
+
+bpy.ops.object.mode_set(mode=current_mode)
