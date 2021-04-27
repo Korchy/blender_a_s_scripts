@@ -7,36 +7,56 @@
       "F1, NONE", 
       [
         [
-          "viewport_toggle", 
+          "viewport_visibility_selection", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/viewport_visibility_selection.py\")", 
+          0
+        ], 
+        [
+          "viewport_visibility", 
           "COMMAND", 
           "", 
           "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/viewport_visibility_custom.py\")", 
           0
         ], 
         [
-          "modifiers_toggle", 
+          ""
+        ], 
+        [
+          "boundary_loop", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/boundary_loop.py\")", 
+          0
+        ], 
+        [
+          "modifiers_selection", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_visibility_selection.py\")", 
+          0
+        ], 
+        [
+          "modifiers_visibility", 
           "COMMAND", 
           "", 
           "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_visibility_custom.py\")", 
           0
         ], 
         [
-          ""
+          "modifiers_overlay_selection", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_visibility_overlay_selection.py\")", 
+          0
         ], 
         [
-          ""
-        ], 
-        [
-          ""
-        ], 
-        [
-          ""
-        ], 
-        [
-          ""
-        ], 
-        [
-          ""
+          "modifiers_overlay", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_visibility_overlay.py\")", 
+          0
         ], 
         [
           ""
