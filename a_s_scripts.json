@@ -70,6 +70,56 @@
       "PRESS", 
       "", 
       ""
+    ], 
+    [
+      "ASC_Modifiers", 
+      "3D View Generic", 
+      "F2, NONE", 
+      [
+        [
+          "subdivision", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_subd.py\")", 
+          0
+        ], 
+        [
+          "subdivision_selected", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/modifiers_subd_selection.py\")", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
+      "PRESS", 
+      "", 
+      ""
     ]
   ]
 }
