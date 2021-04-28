@@ -91,22 +91,46 @@
           0
         ], 
         [
-          ""
+          "edit_vertex", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/edit_vert.py\")", 
+          0
         ], 
         [
-          ""
+          "auto_merge", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/auto_merge.py\")", 
+          0
         ], 
         [
-          ""
+          "viewport_lense", 
+          "COMMAND", 
+          "", 
+          "open_menu(\"Viewport Lense\")", 
+          0
         ], 
         [
-          ""
+          "only_origin", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/only_origin.py\")", 
+          0
         ], 
         [
-          ""
+          "edit_edges", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/edit_edge.py\")", 
+          0
         ], 
         [
-          ""
+          "edit_faces", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/edit_face.py\")", 
+          0
         ], 
         [
           ""
@@ -117,6 +141,59 @@
       ], 
       "PMENU", 
       "pm?", 
+      "PRESS", 
+      "", 
+      ""
+    ], 
+    [
+      "Viewport Lense", 
+      "Window", 
+      "", 
+      [
+        [
+          "row?"
+        ], 
+        [
+          "24", 
+          "COMMAND", 
+          "", 
+          "bpy.context.space_data.lens = 24", 
+          0
+        ], 
+        [
+          "35", 
+          "COMMAND", 
+          "", 
+          "bpy.context.space_data.lens = 35", 
+          0
+        ], 
+        [
+          "50", 
+          "COMMAND", 
+          "", 
+          "bpy.context.space_data.lens = 50", 
+          0
+        ], 
+        [
+          "85", 
+          "COMMAND", 
+          "", 
+          "bpy.context.space_data.lens = 85", 
+          0
+        ], 
+        [
+          "row?"
+        ], 
+        [
+          "Lense", 
+          "PROP", 
+          "", 
+          "bpy.context.space_data.lens", 
+          0
+        ]
+      ], 
+      "DIALOG", 
+      "pd?pd_panel=1", 
       "PRESS", 
       "", 
       ""
