@@ -16,7 +16,7 @@ Exported Pie Menu settings. This file is made from the Pie Menu Editor - Export.
 
 Current version
 -
-1.2.0.
+1.3.0.
 
 For Blender version
 -

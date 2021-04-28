@@ -72,6 +72,126 @@
       ""
     ], 
     [
+      "AS_Mesh", 
+      "3D View Generic", 
+      "F5, NONE", 
+      [
+        [
+          "Left (X)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"LEFT\")", 
+          0
+        ], 
+        [
+          "Right (X)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"RIGHT\")", 
+          0
+        ], 
+        [
+          "Bottom (Z)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"BOTTOM\")", 
+          0
+        ], 
+        [
+          "Top (Z)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"TOP\")", 
+          0
+        ], 
+        [
+          "Backward (Y)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"BACKWARD\")", 
+          0
+        ], 
+        [
+          "Forward (Y)", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/miror_cut.py\", axis=\"FORWARD\")", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
+      "PRESS", 
+      "", 
+      ""
+    ], 
+    [
+      "AS_Align", 
+      "3D View Generic", 
+      "F6, NONE", 
+      [
+        [
+          "X", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/align.py\", axis=\"X\")", 
+          0
+        ], 
+        [
+          "Y", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/align.py\", axis=\"Y\")", 
+          0
+        ], 
+        [
+          "Z", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/align.py\", axis=\"Z\")", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
+      "PRESS", 
+      "", 
+      ""
+    ], 
+    [
       "ASC_Modifiers", 
       "3D View Generic", 
       "F2, NONE", 
