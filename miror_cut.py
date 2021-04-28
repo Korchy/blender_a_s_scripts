@@ -11,6 +11,8 @@ import bpy
 
 axis = kwargs.get('axis', None)
 
+print('axis', axis)
+
 if axis and bpy.context.object:
 
     # current mode
