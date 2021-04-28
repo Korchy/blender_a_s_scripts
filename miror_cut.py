@@ -6,6 +6,9 @@
 
 # cutting mesh vertices for mirror modifier
 
+print('miror cut')
+
+
 import bmesh
 import bpy
 
