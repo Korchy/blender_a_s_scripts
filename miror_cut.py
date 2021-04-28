@@ -9,6 +9,8 @@
 import bmesh
 import bpy
 
+print('miror cut')
+
 axis = kwargs.get('axis', None)
 
 print('axis', axis)
