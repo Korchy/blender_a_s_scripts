@@ -72,6 +72,52 @@
       ""
     ], 
     [
+      "AS_Ops", 
+      "3D View Generic", 
+      "F7, NONE", 
+      [
+        [
+          "Smart Loop Enable", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/smart_loop.py\")", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
+      "PRESS", 
+      "", 
+      ""
+    ], 
+    [
       "AS_Mesh", 
       "3D View Generic", 
       "F5, NONE", 
