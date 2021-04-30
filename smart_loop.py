@@ -5,9 +5,17 @@
 #    https://github.com/Korchy/blender_a_s_scripts
 
 # modifying loop selection for edges and faces
+# with using the following hack:
+#   mesh.loop_select - throws an error when try to execute from tis operator
+#   so
+#       1. remap the default system shortcode from mouse-left-click + alt to the same button F-press
+#       2. when edges or vertices selection mode - executed this operator and finished
+#       3. when face selection mode - here we path through and the default system operator will be executed
+#   but this without the guarantee of right order of executing (first this operator - next default system operator)
+#       so if order will be not right - this may not works
 
-import bmesh
 import bpy
+from bpy.props import BoolProperty
 from bpy.types import Operator
 from bpy.utils import register_class, unregister_class
 
@@ -18,42 +26,19 @@ class AS_SCRIPTS_OT_smart_loop(Operator):
     bl_description = 'Smart Loop'
     bl_options = {'REGISTER', 'UNDO'}
 
+    ring: BoolProperty(
+        default=False
+    )
+
     def execute(self, context):
-        print(5)
         if context.tool_settings.mesh_select_mode[0] or context.tool_settings.mesh_select_mode[1]:
             # vertices or edges
-            bpy.ops.mesh.loop_multi_select(ring=False)
+            bpy.ops.mesh.loop_multi_select(ring=self.ring)
+            return {'FINISHED'}
         else:
-            # selected 2 polygons
-            # find common edge
-            bpy.ops.object.mode_set(mode='OBJECT')
-            selected_faces = [face for face in context.object.data.polygons if face.select]
-            middle_edge_keys = next(iter((set(selected_faces[0].edge_keys) & set(selected_faces[1].edge_keys))), None)
-            if middle_edge_keys:
-                print(middle_edge_keys)
-                middle_edge = next(iter(edge for edge in context.object.data.edges if set(edge.vertices) == set(middle_edge_keys)), None)
-                if middle_edge:
-                    # switch to edges
-                    bpy.context.tool_settings.mesh_select_mode = (False, True, False)
-                    # select middle edge
-                    for polygon in context.object.data.polygons:
-                        polygon.select = False
-                    for edge in context.object.data.edges:
-                        edge.select = False
-                    for vertex in context.object.data.vertices:
-                        vertex.select = False
-                    middle_edge.select = True
-                    # select loop (ring)
-                    bpy.ops.object.mode_set(mode='EDIT')
-                    bpy.ops.mesh.loop_multi_select(ring=True)
-                    # transform selection to polygons
-                    bpy.context.tool_settings.mesh_select_mode = (True, False, False)
-                    bpy.context.tool_settings.mesh_select_mode = (False, False, True)
-                else:
-                    bpy.ops.object.mode_set(mode='EDIT')
-            else:
-                bpy.ops.object.mode_set(mode='EDIT')
-        return {'FINISHED'}
+            # bpy.ops.mesh.loop_select() - can't be called, throws an error
+            # so try to pass to execute it from the default system shortcode (must be remapped to the same keymap as this)
+            return {'PASS_THROUGH'}
 
     @classmethod
     def poll(cls, context):
@@ -69,8 +54,11 @@ class AS_SCRIPTS_SMART_LOOP_KeyMap:
         if context.window_manager.keyconfigs.addon:
             keymap = context.window_manager.keyconfigs.addon.keymaps.new(name='Mesh')
             # add keys
-            keymap_item = keymap.keymap_items.new('as_scripts.smart_loop', 'F', 'PRESS')
             # keymap_item = keymap.keymap_items.new('as_scripts.smart_loop', 'F', 'PRESS', shift=True)
+            keymap_item = keymap.keymap_items.new('as_scripts.smart_loop', 'F', 'PRESS')
+            keymap_item.properties.ring = False
+            keymap_item = keymap.keymap_items.new('as_scripts.smart_loop', 'F', 'PRESS', ctrl=True, alt=True)
+            keymap_item.properties.ring = True
             cls._keymaps.append((keymap, keymap_item))
 
     @classmethod
