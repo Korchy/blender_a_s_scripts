@@ -21,7 +21,11 @@
           0
         ], 
         [
-          ""
+          "support_loops", 
+          "COMMAND", 
+          "", 
+          "open_menu(\"Support Loops\")", 
+          0
         ], 
         [
           "boundary_loop", 
@@ -376,6 +380,60 @@
       ], 
       "DIALOG", 
       "pd?pd_panel=1", 
+      "PRESS", 
+      "", 
+      ""
+    ], 
+    [
+      "Support Loops", 
+      "Window", 
+      "", 
+      [
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          "0.75", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/support_loops.py\", value=0.75)", 
+          0
+        ], 
+        [
+          "0.5", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/support_loops.py\", value=0.5)", 
+          0
+        ], 
+        [
+          "0.9", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"i:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/support_loops.py\", value=0.9)", 
+          0
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ], 
+        [
+          ""
+        ]
+      ], 
+      "PMENU", 
+      "pm?", 
       "PRESS", 
       "", 
       ""
