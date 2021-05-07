@@ -173,7 +173,11 @@
           0
         ], 
         [
-          ""
+          "Clone-Saparate", 
+          "COMMAND", 
+          "", 
+          "execute_script(\"I:/dev/python/blender/_zakaz/Alexander_Sikov/a_s_scripts/clone_separate.py\")", 
+          0
         ], 
         [
           ""
