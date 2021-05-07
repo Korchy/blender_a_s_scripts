@@ -4,7 +4,7 @@
 # GitHub
 #    https://github.com/Korchy/blender_a_s_scripts
 
-# cutting mesh vertices for mirror modifier
+# cloning mesh geometry and separate it to the separate mesh
 
 import bpy
 
